@@ -27,10 +27,10 @@ hacker@hello~intro-to-commands:~$ hello hacker
 Success! Here is your flag:
 pwn.college{8lnimeKHhZ_-ruTKf-HQhOQ_hzV.QX3YjM1wiM5EzNzEzW}
 ```
-<br>for example, here Hello and Hackers! are two arguments to echo.
+for example, here Hello and Hackers! are two arguments to echo.
 
 ### Challenge-3:Command History
-**Flag:** `{MNzIsYfXNIF4kuu5KgmrWEVETwx.0lNzEzNxwiM5EzNzEzW}`<br>
+**Flag:** `pwn.college{MNzIsYfXNIF4kuu5KgmrWEVETwx.0lNzEzNxwiM5EzNzEzW}`<br>
 For this challenge we use the up and down arrow key to bring back a command already typed previously. This prevents us from writing the entire code over and over again. 
 
 ```bash
