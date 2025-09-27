@@ -33,28 +33,23 @@ hacker@globbing~matching-with-:/challenge/files$
 ```
 
 ### Challenge 4: Matching paths with []
-**Flag:** ` pwn.college{ML6CTV7e1nW1cBxyEKbzhrS3QoW.QX1EDO0wiM5EzNzEzW} `
-We can search in a manual with / and go to next result using n and N for previous result. ? to search backwords.
+**Flag:** `pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}`
+An entire path can be globbed. For example:
 ```bash
-hacker@man~searching-manuals:~$ man challenge
-hacker@man~searching-manuals:~$ /challenge/challenge --ulm
-Initializing...
-Correct usage! Your flag: pwn.college{ML6CTV7e1nW1cBxyEKbzhrS3QoW.QX1EDO0wiM5EzNzEzW}
+hacker@globbing~matching-paths-with-:~$ /challenge/run /challenge/files/file_[bash]
+You got it! Here is your flag!
+pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 5: Multiple globs
-**Flag:** `pwn.college{cB5WhOP4skgWa4UB3frs0jjgpa7.QX2EDO0wiM5EzNzEzW}`
+**Flag:** `pwn.college{QQKJVKCVRqjjhvfNfeP5B4PisVn.0lM3kjNxwiM5EzNzEzW}`
 
-man man is used to find the manuals we are looking for.
+We can use multiple glob at a time.
 
 ```bash
-hacker@man~searching-for-manuals:~$ man man challenge
-No manual entry for challenge
-hacker@man~searching-for-manuals:~$ man -k challenge
-chskgafrsj (1)       - print the flag!
-hacker@man~searching-for-manuals:~$ man chskgafrsj
-hacker@man~searching-for-manuals:~$ /challenge/challenge --chskga 544
-Correct usage! Your flag: pwn.college{cB5WhOP4skgWa4UB3frs0jjgpa7.QX2EDO0wiM5EzNzEzW}
+hacker@globbing~multiple-globs:/challenge/files$ /challenge/run *p*
+You got it! Here is your flag!
+pwn.college{QQKJVKCVRqjjhvfNfeP5B4PisVn.0lM3kjNxwiM5EzNzEzW}
 ```
 
 ### Challenge 6: Mixing globs
@@ -97,6 +92,34 @@ hacker@man~help-for-builtins:~$ challenge --secret sppFnxfV
 Correct! Here is your flag!
 pwn.college{sppFnxfVBSmHUNVEkogYEUXh7N4.QX0ETO0wiM5EzNzEzW}
 ```
+
+### Challenge 8: Tab completion
+**Flag:** `pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}`
+An entire path can be globbed. For example:
+```bash
+hacker@globbing~matching-paths-with-:~$ /challenge/run /challenge/files/file_[bash]
+You got it! Here is your flag!
+pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}
+```
+
+### Challenge 9: Multiple option for tab completion
+**Flag:** `pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}`
+An entire path can be globbed. For example:
+```bash
+hacker@globbing~matching-paths-with-:~$ /challenge/run /challenge/files/file_[bash]
+You got it! Here is your flag!
+pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}
+```
+
+### Challenge 10: Tab completion on commands
+**Flag:** `pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}`
+An entire path can be globbed. For example:
+```bash
+hacker@globbing~matching-paths-with-:~$ /challenge/run /challenge/files/file_[bash]
+You got it! Here is your flag!
+pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}
+```
+
 ## What I learned
 I learned how to refer files without typing the full path out.
 ## References 
