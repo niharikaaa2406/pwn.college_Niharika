@@ -1,23 +1,22 @@
 # Digesting Documentation
 ## My solve
 ### Challenge 1: Learning from documentation
-**Flag:** `pwn.college{8fmktiP2a5cG7eJuMAeu9tQQK8v.QXxcTN0wiM5EzNzEzW}`
-
-cat command is used to read out files. It can also concatinate multiple files in case like "cat file1 file2".If no argument is given it will read the terminal input and output.
+**Flag:** `pwn.college{Ea6y1H-vLdF0tVuLWWYrmnYUC1J.QX0ITO0wiM5EzNzEzW}`
+We learn the correct usage of commands for running programs.
 ```bash
-hacker@commands~cat-not-the-pet-but-the-command:~$ cat flag
-pwn.college{8fmktiP2a5cG7eJuMAeu9tQQK8v.QXxcTN0wiM5EzNzEzW}
-hacker@commands~cat-not-the-pet-but-the-command:~$
+hacker@man~learning-from-documentation:~$ /challenge/challenge --giveflag
+Correct argument! Here is your flag:
+pwn.college{Ea6y1H-vLdF0tVuLWWYrmnYUC1J.QX0ITO0wiM5EzNzEzW}
 ```
 
 ### Challenge 2: Learning Complex Usage
-**Flag:** `pwn.college{IeguGJlzXWSmFuV4z75VxgafTS_.QX5ETO0wiM5EzNzEzW}`
+**Flag:** `pwn.college{Y4qLqLTAI8Ztm-cyJdU-fYVXmUz.QX1ITO0wiM5EzNzEzW}`
 
-We can also define absolute path in cat command.
+Using more than one arguments.
 ```bash
-hacker@commands~catting-absolute-paths:~$ cat /flag
-pwn.college{IeguGJlzXWSmFuV4z75VxgafTS_.QX5ETO0wiM5EzNzEzW}
-hacker@commands~catting-absolute-paths:~$
+hacker@man~learning-complex-usage:~$ /challenge/challenge --printfile /flag
+Correct argument! Here is the /flag file:
+pwn.college{Y4qLqLTAI8Ztm-cyJdU-fYVXmUz.QX1ITO0wiM5EzNzEzW}
 ```
 
 ### Challenge 3: Reading Manuals
