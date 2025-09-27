@@ -1,4 +1,4 @@
-# Digesting Documentation
+# Digesting_Documentation
 ## My solve
 ### Challenge 1: Learning from documentation
 **Flag:** `pwn.college{Ea6y1H-vLdF0tVuLWWYrmnYUC1J.QX0ITO0wiM5EzNzEzW}`
@@ -38,21 +38,19 @@ Initializing...
 Correct usage! Your flag: pwn.college{ML6CTV7e1nW1cBxyEKbzhrS3QoW.QX1EDO0wiM5EzNzEzW}
 ```
 
-### Challenge 5: comparing files
-**Flag:** `> pwn.college{A8THlHbuTyIZOGFndPvgbNV7UTW.01MwMDOxwiM5EzNzEzW}`
+### Challenge 5: Searchng For Manuals
+**Flag:** `pwn.college{cB5WhOP4skgWa4UB3frs0jjgpa7.QX2EDO0wiM5EzNzEzW}`
 
-**diff command** compares two files line by line and shows exactly why they are different. 
-<br>
-example, 2c2 means line 2 of file one is different from that f file 2<br>
-1a2 means after line 1 of file 1 another line is added to line 2 of file 2.
-
-Here to get the flag we have to find the diff between two files having many fake flags and one different actual flag.
-
+man man is used to find the manuals we are looking for.
 
 ```bash
-hacker@commands~comparing-files:~$ diff /challenge/decoys_only.txt /challenge/decoys_and_real.txt
-92a93
-> pwn.college{A8THlHbuTyIZOGFndPvgbNV7UTW.01MwMDOxwiM5EzNzEzW}
+hacker@man~searching-for-manuals:~$ man man challenge
+No manual entry for challenge
+hacker@man~searching-for-manuals:~$ man -k challenge
+chskgafrsj (1)       - print the flag!
+hacker@man~searching-for-manuals:~$ man chskgafrsj
+hacker@man~searching-for-manuals:~$ /challenge/challenge --chskga 544
+Correct usage! Your flag: pwn.college{cB5WhOP4skgWa4UB3frs0jjgpa7.QX2EDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 6: listing files
