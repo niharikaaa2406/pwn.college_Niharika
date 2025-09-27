@@ -53,19 +53,25 @@ hacker@man~searching-for-manuals:~$ /challenge/challenge --chskga 544
 Correct usage! Your flag: pwn.college{cB5WhOP4skgWa4UB3frs0jjgpa7.QX2EDO0wiM5EzNzEzW}
 ```
 
-### Challenge 6: listing files
-**Flag:** `pwn.college{ABMxGPyUBLw5UwUGxq2GIzyfa67.QX4IDO0wiM5EzNzEzW}`
-
-For cases when we don't know the entire content od a directory we can use ls command to list all files in a directory.
-If ls command is used without any argument it will list all files in the current directory.
-
+### Challenge 6: Helpful Programs
+**Flag:** `pwn.college{I13tR7gW3Fbr9ClmDr6WB6a1-VZ.QX3IDO0wiM5EzNzEzW}`
+Some programs don't have a man page, but --help (-h, -?, help,/) can be used instead. 
 ```bash
-hacker@commands~listing-files:~$ ls /challenge
-21556-renamed-run-19519  DESCRIPTION.md
-hacker@commands~listing-files:~$ /challenge/21556-renamed-run-19519
-Yahaha, you found me! Here is your flag:
-pwn.college{ABMxGPyUBLw5UwUGxq2GIzyfa67.QX4IDO0wiM5EzNzEzW}
-hacker@commands~listing-files:~$
+Connected!
+hacker@man~helpful-programs:~$ /challenge/challenge --help
+usage: a challenge to make you ask for help [-h] [--fortune] [-v] [-g GIVE_THE_FLAG] [-p]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --fortune             read your fortune
+  -v, --version         get the version number
+  -g GIVE_THE_FLAG, --give-the-flag GIVE_THE_FLAG
+                        get the flag, if given the correct value
+  -p, --print-value     print the value that will cause the -g option to give you the flag
+hacker@man~helpful-programs:~$ /challenge/challenge -p
+The secret value is: 137
+hacker@man~helpful-programs:~$ /challenge/challenge --give-the-flag 137
+Correct usage! Your flag: pwn.college{I13tR7gW3Fbr9ClmDr6WB6a1-VZ.QX3IDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 7: touching files
