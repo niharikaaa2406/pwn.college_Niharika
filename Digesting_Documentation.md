@@ -1,4 +1,4 @@
-# Digesting_Documentation
+# Digesting Documentation
 ## My solve
 ### Challenge 1: Learning from documentation
 **Flag:** `pwn.college{Ea6y1H-vLdF0tVuLWWYrmnYUC1J.QX0ITO0wiM5EzNzEzW}`
@@ -74,97 +74,24 @@ hacker@man~helpful-programs:~$ /challenge/challenge --give-the-flag 137
 Correct usage! Your flag: pwn.college{I13tR7gW3Fbr9ClmDr6WB6a1-VZ.QX3IDO0wiM5EzNzEzW}
 ```
 
-### Challenge 7: touching files
-**Flag:** `pwn.college{0x2g_j5tSzFEmUQgQA9iVzUNpPD.QXwMDO0wiM5EzNzEzW}`
-A simple way to create a file is by using **touch command** , in the format "touch filename" this will create a file in the current directory.
-
+### Challenge 7: Help for Builtins
+**Flag:** `pwn.college{sppFnxfVBSmHUNVEkogYEUXh7N4.QX0ETO0wiM5EzNzEzW}`
+Some commands are bult into the shell itself meaning we can't access it through the previous two commands. These are called bulitins.We can access shell of builitin using "help". We can be specific as well.
 ```bash
-hacker@commands~touching-files:~$ cd /tmp
-hacker@commands~touching-files:/tmp$ touch pwn
-hacker@commands~touching-files:/tmp$ touch college
-hacker@commands~touching-files:/tmp$ /challenge/run
-Success! Here is your flag:
-pwn.college{0x2g_j5tSzFEmUQgQA9iVzUNpPD.QXwMDO0wiM5EzNzEzW}
-hacker@commands~touching-files:/tmp$
-```
+hacker@man~help-for-builtins:~$ help challenge
+challenge: challenge [--fortune] [--version] [--secret SECRET]
+    This builtin command will read you the flag, given the right arguments!
 
-### Challenge 8: removing files
-**Flag:** `pwn.college{ATYiAd7znlRT3Nd9kygYz3eLKcp.QX2kDM1wiM5EzNzEzW}`
-To clean up a directory (delete some files) we will use the rm command in the format "rm file_name"
-```bash
-hacker@commands~removing-files:~$ rm delete_me
-hacker@commands~removing-files:~$ /challenge/check
-Excellent removal. Here is your reward:
-pwn.college{ATYiAd7znlRT3Nd9kygYz3eLKcp.QX2kDM1wiM5EzNzEzW}
-hacker@commands~removing-files:~$
-```
+    Options:
+      --fortune         display a fortune
+      --version         display the version
+      --secret VALUE    prints the flag, if VALUE is correct
 
-### Challenge 9: moving files
-**Flag:** `pwn.college{A_DIhv2GsUfuWApumsEy3LsC8fE.0VOxEzNxwiM5EzNzEzW}`
-We can also move files with **mv command**, it can be used in the format my "mv file_to_be_moved file_final"
-```bash
-hacker@commands~moving-files:~$ mv /flag /tmp/hack-the-planet
-Correct! Performing 'mv /flag /tmp/hack-the-planet'.
-hacker@commands~moving-files:~$ /challenge/check
-Congrats! You successfully moved the flag to /tmp/hack-the-planet! Here it is:
-pwn.college{A_DIhv2GsUfuWApumsEy3LsC8fE.0VOxEzNxwiM5EzNzEzW}
-```
-
-### Challenge 10: hidden files
-**Flag:** `pwn.college{gpGPP-YM93BEKcBMWrRgkuZfGsV.QXwUDO0wiM5EzNzEzW}`
-We know that we can get list of files in a directory through ls command but to access the hidden files (files that start with .) as well we will use "-a"  
-```bash
-hacker@commands~hidden-files:~$ cd /
-hacker@commands~hidden-files:/$ ls -a
-.           .flag-23971838819791  challenge  home   lib64   mnt  proc  sbin  tmp
-..          bin                   dev        lib    libx32  nix  root  srv   usr
-.dockerenv  boot                  etc        lib32  media   opt  run   sys   var
-hacker@commands~hidden-files:/$ cat .flag-23971838819791
-pwn.college{gpGPP-YM93BEKcBMWrRgkuZfGsV.QXwUDO0wiM5EzNzEzW}
-hacker@commands~hidden-files:/$
-```
-
-
-### Challenge 11: An Epic Filesystem Quest
-**Flag:** `pwn.college{A_DIhv2GsUfuWApumsEy3LsC8fE.0VOxEzNxwiM5EzNzEzW}`
-A small game where we will use ls, cat and cd command. I flag is hidden in challenge directory we have to use ls and cat to find it.
-```bash
-hacker@commands~moving-files:~$ mv /flag /tmp/hack-the-planet
-Correct! Performing 'mv /flag /tmp/hack-the-planet'.
-hacker@commands~moving-files:~$ /challenge/check
-Congrats! You successfully moved the flag to /tmp/hack-the-planet! Here it is:
-pwn.college{A_DIhv2GsUfuWApumsEy3LsC8fE.0VOxEzNxwiM5EzNzEzW}
-```
-### Challenge 12: making directories
-**Flag:** `pwn.college{cJeXaRAFvKEBvZ3Y4uiL6ZLHcXk.QXxMDO0wiM5EzNzEzW}`
-We know how to create files now let's know how to create directories.We will use the command **mkdir**.
-```bash
-Connected!
-hacker@commands~making-directories:~$ cd /tmp
-hacker@commands~making-directories:/tmp$ mkdir pwn
-hacker@commands~making-directories:/tmp$ ls
-bin  hsperfdata_root  pwn  tmp.4mK6TfTSUV
-hacker@commands~making-directories:/tmp$ cd pwn
-hacker@commands~making-directories:/tmp/pwn$ touch college
-hacker@commands~making-directories:/tmp/pwn$ /challenge/run
-Success! Here is your flag:
-pwn.college{cJeXaRAFvKEBvZ3Y4uiL6ZLHcXk.QXxMDO0wiM5EzNzEzW}
-```
-
-### Video 14: Symbolic Links
-It is a special type of filethat refers another file.
-They are created using ln -s (-s stands for symbolic). 
-
-### Challenge 15: linking files
-**Flag:** `pwn.college{UUy5yFmBgFhCRC9Lr6QxFlab2ty.QX5ETN1wiM5EzNzEzW}`
-Links are of two types hard and soft(also known as symbolic). A hard link can be sad as a link described by many address so that all lead to a specific place. A soft link is when you point out to another file. It's format is "ln -s /current_file /pointing_to_a_new_file"  the new files gets the original file's content.
-
-```bash
-hacker@commands~linking-files:~$ ln -s /flag /home/hacker/not-the-flag
-hacker@commands~linking-files:~$ /challenge/catflag
-About to read out the /home/hacker/not-the-flag file!
-pwn.college{UUy5yFmBgFhCRC9Lr6QxFlab2ty.QX5ETN1wiM5EzNzEzW}
-hacker@commands~linking-files:~$
+    You must be sure to provide the right value to --secret. That value
+    is "sppFnxfV".
+hacker@man~help-for-builtins:~$ challenge --secret sppFnxfV
+Correct! Here is your flag!
+pwn.college{sppFnxfVBSmHUNVEkogYEUXh7N4.QX0ETO0wiM5EzNzEzW}
 ```
 ## What I learned
 In this module I learned various commands and it's method of application for example, cat, grep, ls, diff, touch, rm, mkdir, ls -a, find, ln -s.
