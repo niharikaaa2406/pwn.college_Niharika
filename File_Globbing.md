@@ -55,27 +55,10 @@ pwn.college{QQKJVKCVRqjjhvfNfeP5B4PisVn.0lM3kjNxwiM5EzNzEzW}
 ### Challenge 6: Mixing globs
 **Flag:** `pwn.college{I13tR7gW3Fbr9ClmDr6WB6a1-VZ.QX3IDO0wiM5EzNzEzW}`
 Some programs don't have a man page, but --help (-h, -?, help,/) can be used instead. 
-```bash
-Connected!
-hacker@man~helpful-programs:~$ /challenge/challenge --help
-usage: a challenge to make you ask for help [-h] [--fortune] [-v] [-g GIVE_THE_FLAG] [-p]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --fortune             read your fortune
-  -v, --version         get the version number
-  -g GIVE_THE_FLAG, --give-the-flag GIVE_THE_FLAG
-                        get the flag, if given the correct value
-  -p, --print-value     print the value that will cause the -g option to give you the flag
-hacker@man~helpful-programs:~$ /challenge/challenge -p
-The secret value is: 137
-hacker@man~helpful-programs:~$ /challenge/challenge --give-the-flag 137
-Correct usage! Your flag: pwn.college{I13tR7gW3Fbr9ClmDr6WB6a1-VZ.QX3IDO0wiM5EzNzEzW}
-```
 
 ### Challenge 7: Exclusionary globbing
 **Flag:** `pwn.college{sppFnxfVBSmHUNVEkogYEUXh7N4.QX0ETO0wiM5EzNzEzW}`
-Some commands are bult into the shell itself meaning we can't access it through the previous two commands. These are called bulitins.We can access shell of builitin using "help". We can be specific as well.
+It is used to filter out files in a glob using ! and ^.
 ```bash
 hacker@man~help-for-builtins:~$ help challenge
 challenge: challenge [--fortune] [--version] [--secret SECRET]
@@ -94,17 +77,16 @@ pwn.college{sppFnxfVBSmHUNVEkogYEUXh7N4.QX0ETO0wiM5EzNzEzW}
 ```
 
 ### Challenge 8: Tab completion
-**Flag:** `pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}`
-An entire path can be globbed. For example:
+**Flag:** `pwn.college{YjaczaUNdCbaQKiZFxOVQbp70yC.0FN0EzNxwiM5EzNzEzW}`
+Instead of * to shorten it we can use tab to auto-complete.
 ```bash
-hacker@globbing~matching-paths-with-:~$ /challenge/run /challenge/files/file_[bash]
-You got it! Here is your flag!
-pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}
+hacker@globbing~tab-completion:~$ cat /challenge/pwncollege​
+pwn.college{YjaczaUNdCbaQKiZFxOVQbp70yC.0FN0EzNxwiM5EzNzEzW}
 ```
 
 ### Challenge 9: Multiple option for tab completion
-**Flag:** `pwn.college{Qwq0efHbSwM7wfu9anmNYeTkdnf.QX0IDO0wiM5EzNzEzW}`
-An entire path can be globbed. For example:
+**Flag:** `cat: /challeng/files/pwn-college: No such file or directory`
+In case of multiple options the number of time you press tab the next option is told. 
 ```bash
 hacker@globbing~matching-paths-with-:~$ /challenge/run /challenge/files/file_[bash]
 You got it! Here is your flag!
