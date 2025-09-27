@@ -1,6 +1,4 @@
 # Comprehending Commands
-type what the challenge asks
-
 ## My solve
 ### Challenge 1: cat:not the pet, but the command
 **Flag:** `pwn.college{8fmktiP2a5cG7eJuMAeu9tQQK8v.QXxcTN0wiM5EzNzEzW}`
