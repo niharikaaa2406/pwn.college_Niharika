@@ -29,13 +29,13 @@ Correct usage! Your flag: pwn.college{MxI-TKNRNcvrKHByQypigWD3iGF.QX0EDO0wiM5EzN
 ```
 
 ### Challenge 4: Searcing Manuals
-**Flag:** `pwn.college{ggC2CC4vmYScsHKk8g-w8ez5Keu.QX3EDO0wiM5EzNzEzW}`
-
-**grep command** is used to search for the context we need for times when the files are too big. There are multiple ways to grep.
-
+**Flag:** ` pwn.college{ML6CTV7e1nW1cBxyEKbzhrS3QoW.QX1EDO0wiM5EzNzEzW} `
+We can search in a manual with / and go to next result using n and N for previous result. ? to search backwords.
 ```bash
-hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep "pwn.college" /challenge/data.txt
-pwn.college{ggC2CC4vmYScsHKk8g-w8ez5Keu.QX3EDO0wiM5EzNzEzW}
+hacker@man~searching-manuals:~$ man challenge
+hacker@man~searching-manuals:~$ /challenge/challenge --ulm
+Initializing...
+Correct usage! Your flag: pwn.college{ML6CTV7e1nW1cBxyEKbzhrS3QoW.QX1EDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 5: comparing files
