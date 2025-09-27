@@ -20,13 +20,12 @@ pwn.college{Y4qLqLTAI8Ztm-cyJdU-fYVXmUz.QX1ITO0wiM5EzNzEzW}
 ```
 
 ### Challenge 3: Reading Manuals
-**Flag:** `pwn.college{4vVibc6gdw_aUP2Qxtpi65C1o0R.QXwITO0wiM5EzNzEzW}`
-
-Some more cat command with absolute path examples.
+**Flag:** `pwn.college{MxI-TKNRNcvrKHByQypigWD3iGF.QX0EDO0wiM5EzNzEzW}`
+**man command** (man is short for manual) gives manual of the commands to be passed as arguments. When you are done using hit q (for quit). The path of database is /usr/share/man directory(no need for path we can just use the man command).
 ```bash
-hacker@commands~more-catting-practice:~$ cat /lib/X11/flag
-pwn.college{4vVibc6gdw_aUP2Qxtpi65C1o0R.QXwITO0wiM5EzNzEzW}
-hacker@commands~more-catting-practice:~$
+hacker@man~reading-manuals:~$ man challenge
+hacker@man~reading-manuals:~$ /challenge/challenge --xcvryy 300
+Correct usage! Your flag: pwn.college{MxI-TKNRNcvrKHByQypigWD3iGF.QX0EDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 4: Searcing Manuals
