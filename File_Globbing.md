@@ -12,13 +12,13 @@ pwn.college{8UvTn6n44QAONFnnxNj41mN4nfm.QXxIDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 2: Matching with ?
-**Flag:** `pwn.college{Y4qLqLTAI8Ztm-cyJdU-fYVXmUz.QX1ITO0wiM5EzNzEzW}`
-
-Using more than one arguments.
+**Flag:** `pwn.college{o4OrzjU09LJt7TuoZyn2tUggdb0.QXyIDO0wiM5EzNzEzW}`
+? is used in plavce of single character wildcard unlike *
 ```bash
-hacker@man~learning-complex-usage:~$ /challenge/challenge --printfile /flag
-Correct argument! Here is the /flag file:
-pwn.college{Y4qLqLTAI8Ztm-cyJdU-fYVXmUz.QX1ITO0wiM5EzNzEzW}
+hacker@globbing~matching-with-:~$ cd /?ha??enge
+hacker@globbing~matching-with-:/challenge$ /challenge/run
+You ran me with the working directory of /challenge! Here is your flag:
+pwn.college{o4OrzjU09LJt7TuoZyn2tUggdb0.QXyIDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 3: Matching with []
