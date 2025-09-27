@@ -22,12 +22,14 @@ pwn.college{o4OrzjU09LJt7TuoZyn2tUggdb0.QXyIDO0wiM5EzNzEzW}
 ```
 
 ### Challenge 3: Matching with []
-**Flag:** `pwn.college{MxI-TKNRNcvrKHByQypigWD3iGF.QX0EDO0wiM5EzNzEzW}`
-**man command** (man is short for manual) gives manual of the commands to be passed as arguments. When you are done using hit q (for quit). The path of database is /usr/share/man directory(no need for path we can just use the man command).
+**Flag:** `pwn.college{MgS20XNxBbvixST5xBJdDvWJTba.QXzIDO0wiM5EzNzEzW}`
+It is a limited form of ?, it dosen't match any character but a subset of potential characters, specified within the brackets.
 ```bash
-hacker@man~reading-manuals:~$ man challenge
-hacker@man~reading-manuals:~$ /challenge/challenge --xcvryy 300
-Correct usage! Your flag: pwn.college{MxI-TKNRNcvrKHByQypigWD3iGF.QX0EDO0wiM5EzNzEzW}
+hacker@globbing~matching-with-:~$ cd /challenge/files
+hacker@globbing~matching-with-:/challenge/files$ /challenge/run file_[bash]
+You got it! Here is your flag!
+pwn.college{MgS20XNxBbvixST5xBJdDvWJTba.QXzIDO0wiM5EzNzEzW}
+hacker@globbing~matching-with-:/challenge/files$
 ```
 
 ### Challenge 4: Matching paths with []
