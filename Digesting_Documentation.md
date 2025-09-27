@@ -94,8 +94,7 @@ Correct! Here is your flag!
 pwn.college{sppFnxfVBSmHUNVEkogYEUXh7N4.QX0ETO0wiM5EzNzEzW}
 ```
 ## What I learned
-In this module I learned various commands and it's method of application for example, cat, grep, ls, diff, touch, rm, mkdir, ls -a, find, ln -s.
-
+I learned about all the important Linux commands to use programs.
 ## References 
-The video provided in the module.
+The resources provided in the module.
 
